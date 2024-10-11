@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const authRouter = require("./routes/auth/auth-routes");
 const app = express();
 require('dotenv').config();  
 const MONGO_URI = process.env.MONGO_URI;  
@@ -29,6 +30,7 @@ app.use(
 );
 app.use(cookieParser());
 app.use(express.json());
+app.use("/api/auth", authRouter);
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
