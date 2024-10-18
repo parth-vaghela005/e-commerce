@@ -9,11 +9,11 @@ function App() {
       <Routes>
         <Route
           path="/auth"
-          element={
-            // <CheckAuth isAuthenticated={isAuthenticated} user={user}>
-              <AuthLayout />
-            // </CheckAuth>
-          }
+          // element={
+          //   // <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+          //     <AuthLayout />
+          //   // </CheckAuth>
+          // }
         >
           <Route path="login" element={<AuthLogin />} />
           <Route path="register" element={<AuthRegister />} />
