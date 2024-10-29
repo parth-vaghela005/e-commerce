@@ -3,8 +3,9 @@ import { Input } from "@/components/ui/input"
 import { Label } from '@/components/ui/label'
 function Registration() {
   return (
-    <div >
-  <form action="" className=''>
+    <div className='flex justify-center items-center h-screen'>
+      <div className='w-[400px] bg-blue-400 '>
+      <form action="" className=''>
 <Label htmlFor="email" className=''>Your email address</Label>
 <Input />
 <Label htmlFor="email" className=''>Your email address</Label>
@@ -15,6 +16,7 @@ function Registration() {
 <Input />
 
   </form>
+      </div>
     </div>
   )
 }
