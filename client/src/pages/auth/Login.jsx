@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { GoTriangleDown } from "react-icons/go";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 import {Link} from 'react-router-dom';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { useState } from "react";
@@ -66,8 +76,25 @@ const submithandle = async(e)=>{
           </p>
         </CardFooter>
       </Card>
+      <DropdownMenu>
+  <DropdownMenuTrigger>
+    
+  <div className="flex justify-center items-center gap-1 bg-black px-3 py-1 rounded-[2px]   text-white">
+  Parth <GoTriangleDown/>
+      </div>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent>
+    
+    {/* <DropdownMenuLabel>My Account</DropdownMenuLabel> */}
+    {/* <DropdownMenuSeparator /> */}
+    <DropdownMenuItem>My Account</DropdownMenuItem>
+    <DropdownMenuItem>Logout</DropdownMenuItem>
+    <DropdownMenuItem>Team</DropdownMenuItem>
+    <DropdownMenuItem>Subscription</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
     </div>
+    
   );
 }
-
 export default Login;
